@@ -1,0 +1,18 @@
+name: fastp
+on: [push]
+
+jobs: 
+  fastp:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v4
+    - name: install fastp
+      run: |
+        conda install -y -c bioconda fastp
+        echo "$CONDA/bin" >> $GITHUB_PATH
+        ls -R $CONDA
+    - name: Run fastp
+      run: |
+        fastp -i testdata/ERR5556343_1.fastq.gz -I testdata/ERR5556343_2.fastq.gz -o R1_trimmed.fastq.gz -O R2_trimmed.fastq.gz --adapter_sequence file:adapters/TruSeq2-PE.fa --adapter_sequence_r2 file:adapters/TruSeq2-PE.fa --cut_tail
+        for i in R1_trimmed.fastq.gz R2_trimmed.fastq.gz; do echo $i; zcat $i | head -n 8; done
+        ls -lh R1_trimmed.fastq.gz R2_trimmed.fastq.gz
