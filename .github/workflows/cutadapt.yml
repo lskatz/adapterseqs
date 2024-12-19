@@ -1,0 +1,19 @@
+name: cutadapt
+on: [push]
+
+jobs: 
+  cutadapt:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install cutadapt
+      run: pip install cutadapt
+    - name: Run cutadapt
+      run: |
+        cutadapt -a file:adapters/TruSeq2-PE.fa -A file:adapters/TruSeq2-PE.fa -o 1.trimmed.fastq.gz -p 2.trimmed.fastq.gz testdata/ERR5556343_1.fastq.gz testdata/ERR5556343_2.fastq.gz
+        echo "R1"
+        zcat 1.trimmed.fastq.gz | head -n 8
+        echo "R2"
+        zcat 2.trimmed.fastq.gz | head -n 8
+        ls -lh 1.trimmed.fastq.gz 2.trimmed.fastq.gz
+        
