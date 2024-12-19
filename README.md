@@ -9,7 +9,7 @@ This repo is meant to be used with external analysis tools.
 The following are suggestions.
 Please see the license in this repo if you use these or any tools in conjunction with the sequences.
 
-_NOTE_ I have not tried these examples myself (yet)
+_NOTE_ I have not tried these specific examples, but there are working examples in [the workflows](/.github/workflows).
 
 ### Trimmomatic
 
