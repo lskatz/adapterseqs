@@ -15,5 +15,4 @@ jobs:
         zcat 1.trimmed.fastq.gz | head -n 8
         echo "R2"
         zcat 2.trimmed.fastq.gz | head -n 8
-        ls -lh 1.trimmed.fastq.gz 2.trimmed.fastq.gz
-        
+        ls -lh 1.trimmed.fastq.gz 2.trimmed.fastq.gz testdata/ERR5556343_1.fastq.gz testdata/ERR5556343_2.fastq.gz
