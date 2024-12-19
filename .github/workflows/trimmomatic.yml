@@ -2,12 +2,13 @@ name: trimmomatic
 on: [push]
 
 jobs: 
-  cutadapt:
+  trimmomatic:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v4
-    - name: Install trimmomatic
-      run: pip install trimmomatic
+    - name: install trimmomatic
+      run: |
+        conda install -c bioconda trimmomatic
     - name: Run trimmomatic
       run: |
         trimmomatic PE -phred33 testdata/ERR5556343_1.fastq.gz testdata/ERR5556343_2.fastq.gz R1.paired.fastq.gz R1.unpaired.fastq.gz R2.paired.fastq.gz R2.unpaired.fastq.gz ILLUMINACLIP:adapters/TruSeq2-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
