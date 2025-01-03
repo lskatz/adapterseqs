@@ -17,6 +17,28 @@ Please see [LICENSE.md](/LICENSE.md) if you use this repo.
 
 [^1]: Oligonucleotide sequences © 2023 Illumina, Inc. All rights reserved.
 
+## Installation
+
+This is a suggested way to install since this is only a repo of data.
+
+```bash
+mkdir -pv $HOME/db
+pushd $HOME/db # step into the db directory
+git clone https://github.com/lskatz/adapterseqs
+ADAPTERS=$(find $HOME/db/adapterseqs -name '*.fa')
+popd # return to the original directory
+```
+
+### updating
+
+If you ran the `git clone` command, then you can use `git` to update like so.
+
+```bash
+pushd $HOME/db/adapterseqs
+git pull origin master
+popd
+```
+
 ## Usage
 
 This repo is meant to be used with external analysis tools.
