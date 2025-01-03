@@ -3,6 +3,17 @@
 This is a repo to hold adapter sequences for genome sequencing.
 Please see [LICENSE.md](/LICENSE.md) if you use this repo.
 
+## Adapters
+
+| File | provenance |
+| NexteraPE-PE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+| ONT.fa | [Porechop fork](https://github.com/BioWilko/Porechop) |
+| TruSeq2-PE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+| TruSeq2-SE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+| TruSeq3-PE-2.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+| TruSeq3-PE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+| TruSeq3-SE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
+
 ## Usage
 
 This repo is meant to be used with external analysis tools.

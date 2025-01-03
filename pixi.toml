@@ -1,0 +1,15 @@
+[project]
+authors = ["Lee Katz - Aspen <gzu2@cdc.gov>"]
+channels = ["conda-forge", "bioconda"]
+description = "a listing of adapter sequences. This pixi instance helps load adapter trimming software."
+name = "adapterseqs"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+cutadapt = ">=5.0,<6"
+trimmomatic = ">=0.39,<0.40"
+fastp = ">=0.24.0,<0.25"
+fasten = ">=0.8.3,<0.9"
