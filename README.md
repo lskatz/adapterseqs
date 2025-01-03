@@ -15,7 +15,7 @@ Please see [LICENSE.md](/LICENSE.md) if you use this repo.
 | TruSeq3-PE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
 | TruSeq3-SE.fa | [Trimmomatic](https://github.com/usadellab/Trimmomatic) [^1] |
 
-[^1] Oligonucleotide sequences © 2023 Illumina, Inc. All rights reserved.
+[^1]: Oligonucleotide sequences © 2023 Illumina, Inc. All rights reserved.
 
 ## Usage
 
